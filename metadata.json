@@ -1,0 +1,6 @@
+{
+  "name": "Korean with Ina",
+  "description": "Korean courses, books and a step-by-step roadmap from Ina. Learning Korean can be simple and fun!",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
