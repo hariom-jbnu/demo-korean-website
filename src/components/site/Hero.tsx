@@ -16,9 +16,11 @@ export default function Hero() {
           <h1 className="text-balance font-display text-[clamp(2.35rem,4.4vw,3.75rem)] font-bold leading-[1.08] tracking-[-0.02em] text-[#3d348b]">
             Learning Korean can be simple and fun.
           </h1>
-          <p className="mt-5 max-w-[52ch] text-base leading-[1.65] text-[#4B4863] sm:text-[1.075rem]">
-            Clear, structured courses for adult learners: read Hangul, grow your
-            vocabulary, and build sentences that sound like you.
+          <p className="mt-5 max-w-[54ch] text-base leading-[1.65] text-[#4B4863] sm:text-[1.075rem]">
+            I hope learning does not stay behind in 3rd grade, but becomes
+            something you can enjoy deeply as an adult too — with clear,
+            structured Korean courses for Hangul, vocabulary, and everyday
+            sentences.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-3">

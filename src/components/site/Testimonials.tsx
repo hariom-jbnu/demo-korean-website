@@ -1,13 +1,22 @@
-import { Quote } from "lucide-react";
+import { useState } from "react";
+import { ChevronDown, ChevronUp, Quote } from "lucide-react";
 import { testimonials } from "@/src/components/site/links";
+import {
+  getHiddenTestimonialsCount,
+  getVisibleTestimonials,
+} from "@/src/lib/testimonials";
 
 export default function Testimonials() {
+  const [showAll, setShowAll] = useState(false);
+  const visible = getVisibleTestimonials(testimonials, showAll);
+  const hiddenCount = getHiddenTestimonialsCount(testimonials.length);
+
   return (
     <section id="stories" className="scroll-mt-20 bg-white py-16 sm:py-24">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-xl">
           <h2 className="text-balance font-display text-[2rem] font-bold leading-[1.14] tracking-[-0.02em] text-[#3d348b] sm:text-[2.5rem]">
-            What students say.
+            What my students say.
           </h2>
           <p className="mt-3 text-base leading-[1.6] text-[#4B4863]">
             Real feedback from learners building confidence in reading, grammar,
@@ -16,9 +25,9 @@ export default function Testimonials() {
         </div>
 
         <div className="mt-10 grid gap-6 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((item) => (
+          {visible.map((item, index) => (
             <figure
-              key={item.name}
+              key={`${item.name}-${index}`}
               className="flex flex-col justify-between rounded-2xl border border-[#E6E4F0] bg-[#FAF9F5]/75 p-6 transition-colors duration-200 hover:border-[#7678ed]/55 hover:bg-white"
             >
               <div>
@@ -50,6 +59,29 @@ export default function Testimonials() {
             </figure>
           ))}
         </div>
+
+        {hiddenCount > 0 ? (
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              aria-expanded={showAll}
+              onClick={() => setShowAll((prev) => !prev)}
+              className="inline-flex min-h-[44px] cursor-pointer items-center gap-2 rounded-lg border border-[#3d348b]/25 bg-[#FAF9F5] px-5 py-2.5 font-heading text-sm font-semibold text-[#3d348b] transition-colors duration-200 hover:border-[#f35b04] hover:bg-white hover:text-[#f35b04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3d348b] focus-visible:ring-offset-2"
+            >
+              {showAll ? (
+                <>
+                  <span>Show fewer reviews</span>
+                  <ChevronUp className="h-4 w-4" aria-hidden={true} />
+                </>
+              ) : (
+                <>
+                  <span>Show all {testimonials.length} student reviews</span>
+                  <ChevronDown className="h-4 w-4" aria-hidden={true} />
+                </>
+              )}
+            </button>
+          </div>
+        ) : null}
       </div>
     </section>
   );

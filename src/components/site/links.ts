@@ -52,6 +52,15 @@ export const SITE = {
   tutoringHref: `${BASE}/koreantutoring`,
 } as const;
 
+export const FULL_PACKAGE = {
+  heading: "Want everything?",
+  description:
+    "If you want all of my products (5 books and 4 video courses) as a full package, just email me —",
+  discountHighlight: "I will send you a 30% discount as a thank you.",
+  email: "inakimie2822@gmail.com",
+  mailtoHref: "mailto:inakimie2822@gmail.com?subject=Full%20Package%20Inquiry",
+} as const;
+
 export const portraits = {
   main: "/images/ina-portrait.webp",
 } as const;
@@ -78,7 +87,7 @@ export const courses: CourseItem[] = [
     track: "sentences",
     icon: "layers",
     promise:
-      "Turn the words you know into real sentences — particles, tenses, and word order finally connected.",
+      "The complete Korean sentence-making course — master particles, tenses, and word order to build real sentences.",
     lessons: "57 video lessons",
     access: "Lifetime access",
     level: "Elementary",
@@ -92,7 +101,7 @@ export const courses: CourseItem[] = [
     track: "sentences",
     icon: "book",
     promise:
-      "Build sentences on the spot with the patterns Korean speakers actually use, backed by hundreds of examples.",
+      "Learn 331 grammar patterns with done-for-you pattern flashcards, 2,000+ example sentences, and step-by-step video lessons.",
     lessons: "331 pattern lessons",
     access: "Lifetime access",
     level: "Intermediate",
@@ -106,7 +115,7 @@ export const courses: CourseItem[] = [
     track: "speaking-books",
     icon: "mic",
     promise:
-      "Train your ear, rhythm, and pronunciation with guided shadowing dialogues you can repeat out loud.",
+      "Improve your tone, rhythm, pronunciation, and flow with guided shadowing dialogues from real conversations.",
     lessons: "56 shadowing videos",
     access: "3-month program",
     level: "Any level",
@@ -145,7 +154,7 @@ export const roadmapSteps: RoadmapStep[] = [
       },
       {
         label: "Read Korean Like a Pro",
-        note: "video course",
+        note: "guidance + video lessons",
         href: `${BASE}/readkoreanlikeapro`,
       },
     ],
@@ -154,11 +163,11 @@ export const roadmapSteps: RoadmapStep[] = [
     id: "step-vocab",
     number: "02",
     title: "Grow your vocabulary",
-    body: "Lack of vocabulary holds you back in every area of Korean. Start with foundation words you can use right away.",
+    body: "Lack of vocabulary holds you back in every area of Korean. Start with foundation words that become the building blocks for future sentences.",
     links: [
       {
-        label: "Ultimate Vocabulary Power Pack",
-        note: "2,206+ words",
+        label: "Ultimate Vocabulary Power Pack 2.0",
+        note: "2,206+ verbs & nouns",
         href: `${BASE}/vocab-power-pack`,
       },
     ],
@@ -166,8 +175,8 @@ export const roadmapSteps: RoadmapStep[] = [
   {
     id: "step-speaking",
     number: "03",
-    title: "Speaking & pronunciation",
-    body: "Learn phrases you can use anywhere, and practice tone, rhythm, and flow with real conversations.",
+    title: "Speaking & pronunciation help",
+    body: "Learn essential Korean phrases you can use anywhere, and improve your tone, rhythm, pronunciation, and flow with real conversations.",
     links: [
       {
         label: "Speak Korean Anywhere",
@@ -184,8 +193,8 @@ export const roadmapSteps: RoadmapStep[] = [
   {
     id: "step-sentences",
     number: "04",
-    title: "Make sentences",
-    body: "You can read and you know some words. Now build your own sentences — present, past, and future.",
+    title: "Make sentences (present, past, future)",
+    body: "You know how to read Korean and have some basic vocabulary. Now it's time to start making your own sentences.",
     links: [
       {
         label: "Sentence Freedom",
@@ -198,11 +207,11 @@ export const roadmapSteps: RoadmapStep[] = [
     id: "step-patterns",
     number: "05",
     title: "Expand your sentences",
-    body: "Your sentences work, but they feel limited. Expand what you can say with the essential patterns.",
+    body: "You can make sentences, but they feel a bit limited. Expand what you can say by learning essential Korean grammar patterns.",
     links: [
       {
-        label: "The Game Changer",
-        note: "331 patterns",
+        label: "The Game Changer for Korean Grammar",
+        note: "331 patterns · flashcards · 2,000+ examples",
         href: `${BASE}/gamechanger`,
       },
     ],
@@ -211,11 +220,11 @@ export const roadmapSteps: RoadmapStep[] = [
     id: "step-travel",
     number: "06",
     title: "Going to Korea?",
-    body: "Get trip-ready with personal recommendations and the phrases you'll actually use on the ground.",
+    body: "Planning a trip and want to feel prepared? Get personal recommendations and useful travel phrases for the road.",
     links: [
       {
-        label: "Korea Travel Guide",
-        note: "restaurants, cafés, and hotels",
+        label: "All-in-One Korea Travel Guide",
+        note: "restaurants, cafés & hotels",
         href: `${BASE}/koreatravelguide`,
       },
       {
@@ -231,16 +240,23 @@ export const testimonials: TestimonialItem[] = [
   {
     topic: "Sentence Building",
     before: "Going from learning the alphabet all the way to ",
-    highlight: "putting together full sentences",
-    after: " is still crazy to me! I think it's amazing how far we've all come.",
+    highlight: "putting together full sentences or paragraphs",
+    after: " is still crazy to me! I think it's amazing how far we've all come!",
     name: "Rachel F.",
   },
   {
     topic: "Measurable Progress",
     before: "There is ",
     highlight: "tangible growth in my Korean journey",
-    after: " and I attribute it to Korean with Ina. It's one investment you can never go wrong on.",
+    after: " and I attribute it to Korean with Ina. It's one investment you can never go wrong on. Thank you so much 선생님 Ina and the team, you are all the best.",
     name: "E.G.",
+  },
+  {
+    topic: "Speaking Practice",
+    before: "I loved how this class really challenged us to ",
+    highlight: "produce sentences and speak the language",
+    after: "! Having a safe space to just try and get live feedback was amazing.",
+    name: "Vivian F.",
   },
   {
     topic: "Class Community",
@@ -250,25 +266,81 @@ export const testimonials: TestimonialItem[] = [
     name: "Anthony A.",
   },
   {
-    topic: "Speaking Practice",
-    before: "I loved how this class really challenged us to ",
-    highlight: "produce sentences and speak the language",
-    after: "! Having a safe space to try and get live feedback was amazing.",
-    name: "Vivian F.",
-  },
-  {
     topic: "Teaching Craft",
     before: "As a former educator, I have so much respect for the work you do and the ",
     highlight: "love you clearly have for teaching",
-    after: ".",
+    after: "!",
     name: "Amanda H.",
   },
   {
     topic: "Motivation & Joy",
-    before: "This class will ",
-    highlight: "ignite a fire for knowledge",
-    after: " that will take you by surprise. Who knew learning could be so fun?",
+    before: "I loved how Ina made it a safe space to learn! Her teaching style is comfortable and relaxed, so no one ever had to be afraid of trying or making mistakes. If anyone has even a small desire to learn Korean, ",
+    highlight: "this class will ignite a fire for knowledge",
+    after: " that will take you by surprise. Who knew learning could be so fun?!",
     name: "Suzi R.",
+  },
+  {
+    topic: "Mentorship",
+    before: "Thank you, Ina (and Ina's team) for sharing your ",
+    highlight: "time, expertise, superpowers, and golden nuggets",
+    after: " with us in such an encouraging and loving way!",
+    name: "Kat E.",
+  },
+  {
+    topic: "Dedicated Team",
+    before: "Teacher Ina and the whole team are very ",
+    highlight: "talented and passionate in their teaching",
+    after: ". It shows through the work. It's really rare to find teachers like you guys. From the bottom of my heart, I want to thank you all.",
+    name: "E.V.",
+  },
+  {
+    topic: "Creative Lessons",
+    before: "Ina made me look forward to coming to class. I also loved her ",
+    highlight: "creative style",
+    after: " in teaching.",
+    name: "Jatiela M.",
+  },
+  {
+    topic: "Curriculum Depth",
+    before: "As a fellow teacher, I understand how much time, energy, and thought go into ",
+    highlight: "creating engaging and meaningful content",
+    after: " and supporting students through the learning process. Thank you for all the resources, activities, and encouragement you provided for all of us on this Korean learning journey.",
+    name: "Holly P.",
+  },
+  {
+    topic: "Personal Impact",
+    before: "Ina, you are an ",
+    highlight: "inspiration and someone who has truly changed my life",
+    after: ".",
+    name: "Vivian F.",
+  },
+  {
+    topic: "Lasting Friendships",
+    before: "I've made ",
+    highlight: "lasting friendships",
+    after: " and learned so much through your courses! I'm so happy I made the decision to take them!",
+    name: "Audra U.",
+  },
+  {
+    topic: "Supportive Group",
+    before: "Ina's enthusiasm is so infectious! I was always excited for class. Our group was super supportive of each other, and I think that was a ",
+    highlight: "direct result of Ina's endless encouragement",
+    after: " for all of us!",
+    name: "R.F.",
+  },
+  {
+    topic: "Teaching Excellence",
+    before: "Ina, you manage to express it all in a ",
+    highlight: "package of professional work ethics, enthusiasm, personal authenticity, and a genuine fondness",
+    after: " for your students. If teaching were an art form, I love the fact that I bought one of your pieces!",
+    name: "Sisse S.",
+  },
+  {
+    topic: "Favorite Teacher",
+    before: "If I'm ever faced with the \"",
+    highlight: "who was your favorite teacher?",
+    after: "\" question, my answer would now be Ina Kim! I was pretty sad to have class end, but looking forward to a future class with you. No doubt, I'm in!",
+    name: "A.U.",
   },
 ];
 

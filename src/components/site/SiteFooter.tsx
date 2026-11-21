@@ -72,8 +72,11 @@ export default function SiteFooter() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  1:1 Korean tutoring
+                  1:1 Korean lessons
                 </a>
+              </li>
+              <li className="pt-1 text-xs leading-relaxed text-[#64607D]">
+                PO Box: {SITE.poBox}
               </li>
             </ul>
             <div className="mt-5 flex items-center gap-2">

@@ -95,8 +95,8 @@ export default function EmailSignup() {
               Join the Newsletter
             </h2>
             <p className="mt-3 max-w-lg text-sm leading-relaxed text-[#4B4863] sm:text-[0.95rem]">
-              Korean study tips, early access to new courses, and the updates I
-              only share with subscribers.
+              Secret discounts, early access to new courses, and Korean tips I
+              don&apos;t share anywhere else.
             </p>
             <form onSubmit={handleSubmit} noValidate className="mt-8">
               <div className="grid gap-4 sm:grid-cols-2">
@@ -146,7 +146,10 @@ export default function EmailSignup() {
                   htmlFor="email"
                   className="block font-heading text-xs font-semibold text-[#3d348b]"
                 >
-                  Email address
+                  Email address{" "}
+                  <span className="font-normal text-[#64607D]">
+                    (please check spelling)
+                  </span>
                 </label>
                 <input
                   id="email"
